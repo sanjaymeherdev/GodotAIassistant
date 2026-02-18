@@ -1,0 +1,290 @@
+[gd_scene load_steps=2 format=3 uid="uid://3lafummasqcd"]
+
+[ext_resource type="Script" uid="uid://dciwf5mrxwshf" path="res://addons/godotassistant/plugin.gd" id="1_bmdcq"]
+
+[node name="Control" type="Control" node_paths=PackedStringArray("api_key_input", "api_key_save_button", "gdscript_output", "gdscript_output_copy", "gdscript_output_clear", "gdscript_output_save", "gdscript_output_saveas", "gdscript_input", "gdscript_input_open", "gdscript_input_copy", "gdscript_input_clear", "gdscript_input_run", "scene_output", "scene_output_copy", "scene_output_clear", "scene_output_save", "scene_output_saveas", "scene_input", "scene_input_open", "scene_input_copy", "scene_input_clear", "scene_input_run", "chat_output", "chat_input", "chat_input_open", "chat_input_copy", "chat_input_clear", "chat_input_run")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bmdcq")
+api_key_input = NodePath("VBoxContainer/HBoxContainer/APIkey")
+api_key_save_button = NodePath("VBoxContainer/HBoxContainer/Button")
+gdscript_output = NodePath("VBoxContainer/TabContainer/GdScript/HBoxContainer/output/TextEdit")
+gdscript_output_copy = NodePath("VBoxContainer/TabContainer/GdScript/HBoxContainer/output/HBoxContainer/copy")
+gdscript_output_clear = NodePath("VBoxContainer/TabContainer/GdScript/HBoxContainer/output/HBoxContainer/clear")
+gdscript_output_save = NodePath("VBoxContainer/TabContainer/GdScript/HBoxContainer/output/HBoxContainer/save")
+gdscript_output_saveas = NodePath("VBoxContainer/TabContainer/GdScript/HBoxContainer/output/HBoxContainer/saveas")
+gdscript_input = NodePath("VBoxContainer/TabContainer/GdScript/HBoxContainer/input/TextEdit")
+gdscript_input_open = NodePath("VBoxContainer/TabContainer/GdScript/HBoxContainer/input/HBoxContainer2/open")
+gdscript_input_copy = NodePath("VBoxContainer/TabContainer/GdScript/HBoxContainer/input/HBoxContainer2/copy")
+gdscript_input_clear = NodePath("VBoxContainer/TabContainer/GdScript/HBoxContainer/input/HBoxContainer2/clear")
+gdscript_input_run = NodePath("VBoxContainer/TabContainer/GdScript/HBoxContainer/input/HBoxContainer2/Run")
+scene_output = NodePath("VBoxContainer/TabContainer/SceneGenerator/HBoxContainer/output/TextEdit")
+scene_output_copy = NodePath("VBoxContainer/TabContainer/SceneGenerator/HBoxContainer/output/HBoxContainer/copy")
+scene_output_clear = NodePath("VBoxContainer/TabContainer/SceneGenerator/HBoxContainer/output/HBoxContainer/clear")
+scene_output_save = NodePath("VBoxContainer/TabContainer/SceneGenerator/HBoxContainer/output/HBoxContainer/save")
+scene_output_saveas = NodePath("VBoxContainer/TabContainer/SceneGenerator/HBoxContainer/output/HBoxContainer/saveas")
+scene_input = NodePath("VBoxContainer/TabContainer/SceneGenerator/HBoxContainer/input/TextEdit")
+scene_input_open = NodePath("VBoxContainer/TabContainer/SceneGenerator/HBoxContainer/input/HBoxContainer2/open")
+scene_input_copy = NodePath("VBoxContainer/TabContainer/SceneGenerator/HBoxContainer/input/HBoxContainer2/copy")
+scene_input_clear = NodePath("VBoxContainer/TabContainer/SceneGenerator/HBoxContainer/input/HBoxContainer2/clear")
+scene_input_run = NodePath("VBoxContainer/TabContainer/SceneGenerator/HBoxContainer/input/HBoxContainer2/Run")
+chat_output = NodePath("VBoxContainer/TabContainer/Chatassistant/hbox/output/TextEdit")
+chat_input = NodePath("VBoxContainer/TabContainer/Chatassistant/hbox/input/TextEdit")
+chat_input_open = NodePath("VBoxContainer/TabContainer/Chatassistant/hbox/input/HBoxContainer2/open")
+chat_input_copy = NodePath("VBoxContainer/TabContainer/Chatassistant/hbox/input/HBoxContainer2/copy")
+chat_input_clear = NodePath("VBoxContainer/TabContainer/Chatassistant/hbox/input/HBoxContainer2/clear")
+chat_input_run = NodePath("VBoxContainer/TabContainer/Chatassistant/hbox/input/HBoxContainer2/Run")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Godot AI Assistant Developed by YouTube: Champ Gaming"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Enter API Key"
+
+[node name="APIkey" type="LineEdit" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "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"
+placeholder_text = "API Key"
+
+[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Save"
+
+[node name="TabContainer" type="TabContainer" parent="VBoxContainer"]
+layout_mode = 2
+current_tab = 1
+
+[node name="GdScript" type="VBoxContainer" parent="VBoxContainer/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/TabContainer/GdScript"]
+layout_mode = 2
+
+[node name="output" type="VBoxContainer" parent="VBoxContainer/TabContainer/GdScript/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/TabContainer/GdScript/HBoxContainer/output"]
+layout_mode = 2
+text = "Output"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/TabContainer/GdScript/HBoxContainer/output"]
+layout_mode = 2
+
+[node name="copy" type="Button" parent="VBoxContainer/TabContainer/GdScript/HBoxContainer/output/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Copy"
+
+[node name="clear" type="Button" parent="VBoxContainer/TabContainer/GdScript/HBoxContainer/output/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Clear"
+
+[node name="save" type="Button" parent="VBoxContainer/TabContainer/GdScript/HBoxContainer/output/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Save"
+
+[node name="saveas" type="Button" parent="VBoxContainer/TabContainer/GdScript/HBoxContainer/output/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Save As"
+
+[node name="TextEdit" type="TextEdit" parent="VBoxContainer/TabContainer/GdScript/HBoxContainer/output"]
+custom_minimum_size = Vector2(0, 450)
+layout_mode = 2
+size_flags_vertical = 3
+wrap_mode = 1
+
+[node name="input" type="VBoxContainer" parent="VBoxContainer/TabContainer/GdScript/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/TabContainer/GdScript/HBoxContainer/input"]
+layout_mode = 2
+text = "Input"
+
+[node name="Label2" type="Label" parent="VBoxContainer/TabContainer/GdScript/HBoxContainer/input"]
+layout_mode = 2
+text = "Prompt Box"
+
+[node name="TextEdit" type="TextEdit" parent="VBoxContainer/TabContainer/GdScript/HBoxContainer/input"]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/TabContainer/GdScript/HBoxContainer/input"]
+layout_mode = 2
+
+[node name="open" type="Button" parent="VBoxContainer/TabContainer/GdScript/HBoxContainer/input/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Open"
+
+[node name="copy" type="Button" parent="VBoxContainer/TabContainer/GdScript/HBoxContainer/input/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Copy"
+
+[node name="clear" type="Button" parent="VBoxContainer/TabContainer/GdScript/HBoxContainer/input/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Clear"
+
+[node name="Run" type="Button" parent="VBoxContainer/TabContainer/GdScript/HBoxContainer/input/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Run"
+
+[node name="SceneGenerator" type="VBoxContainer" parent="VBoxContainer/TabContainer"]
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/TabContainer/SceneGenerator"]
+layout_mode = 2
+
+[node name="output" type="VBoxContainer" parent="VBoxContainer/TabContainer/SceneGenerator/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/TabContainer/SceneGenerator/HBoxContainer/output"]
+layout_mode = 2
+text = "Output"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/TabContainer/SceneGenerator/HBoxContainer/output"]
+layout_mode = 2
+
+[node name="copy" type="Button" parent="VBoxContainer/TabContainer/SceneGenerator/HBoxContainer/output/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Copy"
+
+[node name="clear" type="Button" parent="VBoxContainer/TabContainer/SceneGenerator/HBoxContainer/output/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Clear"
+
+[node name="save" type="Button" parent="VBoxContainer/TabContainer/SceneGenerator/HBoxContainer/output/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Save"
+
+[node name="saveas" type="Button" parent="VBoxContainer/TabContainer/SceneGenerator/HBoxContainer/output/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Save As"
+
+[node name="TextEdit" type="TextEdit" parent="VBoxContainer/TabContainer/SceneGenerator/HBoxContainer/output"]
+custom_minimum_size = Vector2(0, 450)
+layout_mode = 2
+size_flags_vertical = 3
+wrap_mode = 1
+
+[node name="input" type="VBoxContainer" parent="VBoxContainer/TabContainer/SceneGenerator/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/TabContainer/SceneGenerator/HBoxContainer/input"]
+layout_mode = 2
+text = "Input"
+
+[node name="Label2" type="Label" parent="VBoxContainer/TabContainer/SceneGenerator/HBoxContainer/input"]
+layout_mode = 2
+text = "Prompt Box"
+
+[node name="TextEdit" type="TextEdit" parent="VBoxContainer/TabContainer/SceneGenerator/HBoxContainer/input"]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/TabContainer/SceneGenerator/HBoxContainer/input"]
+layout_mode = 2
+
+[node name="open" type="Button" parent="VBoxContainer/TabContainer/SceneGenerator/HBoxContainer/input/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Open"
+
+[node name="copy" type="Button" parent="VBoxContainer/TabContainer/SceneGenerator/HBoxContainer/input/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Copy"
+
+[node name="clear" type="Button" parent="VBoxContainer/TabContainer/SceneGenerator/HBoxContainer/input/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Clear"
+
+[node name="Run" type="Button" parent="VBoxContainer/TabContainer/SceneGenerator/HBoxContainer/input/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Run"
+
+[node name="Chatassistant" type="VBoxContainer" parent="VBoxContainer/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="hbox" type="HBoxContainer" parent="VBoxContainer/TabContainer/Chatassistant"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="output" type="VBoxContainer" parent="VBoxContainer/TabContainer/Chatassistant/hbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextEdit" type="TextEdit" parent="VBoxContainer/TabContainer/Chatassistant/hbox/output"]
+custom_minimum_size = Vector2(0, 340)
+layout_mode = 2
+
+[node name="input" type="VBoxContainer" parent="VBoxContainer/TabContainer/Chatassistant/hbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextEdit" type="TextEdit" parent="VBoxContainer/TabContainer/Chatassistant/hbox/input"]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/TabContainer/Chatassistant/hbox/input"]
+layout_mode = 2
+
+[node name="open" type="Button" parent="VBoxContainer/TabContainer/Chatassistant/hbox/input/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Open"
+
+[node name="copy" type="Button" parent="VBoxContainer/TabContainer/Chatassistant/hbox/input/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Copy"
+
+[node name="clear" type="Button" parent="VBoxContainer/TabContainer/Chatassistant/hbox/input/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Clear"
+
+[node name="Run" type="Button" parent="VBoxContainer/TabContainer/Chatassistant/hbox/input/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Run"
